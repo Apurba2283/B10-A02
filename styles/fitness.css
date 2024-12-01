@@ -1,0 +1,300 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+}
+
+/* Shared styles */
+.word-primary {
+    color: #E6533C;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.btn-primary {
+    background-color: #E6533C;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 46px;
+    cursor: pointer;
+}
+
+/* Nav styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav-title {
+    font-weight: 800;
+    font-size: 35px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav li a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav li a:hover {
+    color: #E6533C;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin: right;
+}
+
+.hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+    nav {
+        flex-direction: row;
+        align-items:space-between;
+    }
+
+    /* Hide the menu by default */
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+        margin-top: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Tablet and Computer (min-width: 768px) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    nav {
+        padding: 20px 40px;
+    }
+
+    .nav-title {
+        font-size: 40px;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin-right: 50px;
+    }
+
+    nav li a {
+        font-size: 20px;
+    }
+
+    .btn-primary {
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+}
+
+/* Large screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+    nav {
+        padding: 20px 80px;
+    }
+
+    .nav-title {
+        font-size: 50px;
+    }
+
+    nav ul li {
+        margin-right: 70px;
+    }
+
+    nav li a {
+        font-size: 22px;
+    }
+
+    .btn-primary {
+        font-size: 22px;
+        padding: 12px 40px;
+    }
+}
+
+
+ /* banner styles */
+
+ .banner{
+    display: flex;
+    justify-content: space-around;
+ }
+.banner-content{
+    max-width: 600px;
+    margin: 50px 300px 0px -80px;
+}
+
+ .banner-title{
+    font-weight: black;
+    font-size: 50px;
+    padding: 10px 200px 10px 100px;
+ }
+
+ .banner-description{
+    font-weight: regular;
+    font-size: 12px;
+    padding: 10px 100px 30px 50px;
+ }
+
+ .banner-profile-pic{
+    max-width: 100%;
+    margin: 0px 0px 0px -400px;
+ }
+
+ /* Cards styling */
+.card {
+    position:absolute;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* Specific card positions */
+.top-right {
+    top: 35%;
+    right: 5%;
+}
+
+.bottom-left {
+    bottom: 3%;
+    right: 32%;
+}
+
+/* Card text */
+.card h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 5px 0 0 0;
+}
+
+/* Mobile View */
+@media (max-width: 576px) {
+    .banner{
+        flex-direction: column;
+    }
+
+    .banner-content {
+        margin: 10px 0;
+    }
+    .banner-profile-pic{
+        max-width: 90%;
+
+    }
+
+    .card {
+        position: absolute;
+        margin: 10px 0px;
+    }
+    .top-right{
+        top:65%;
+        right: 5%
+    }
+    .bottom-left {
+        bottom: 2%;
+        right: 50%;
+    }
+}
+
+/* Tablet View */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .banner {
+        padding: 30px;
+    }
+
+    .banner-content {
+        max-width: 400px;
+    }
+
+    .card.top-right {
+        top: 5%;
+        right: 5%;
+    }
+
+    .card.bottom-left {
+        bottom: 5%;
+        left: 5%;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+    .banner {
+        justify-content: space-between;
+    }
+
+    .banner-content {
+        max-width: 600px;
+    }
+
+    .banner-profile-pic {
+        max-width: 50%;
+    }
+}
+
