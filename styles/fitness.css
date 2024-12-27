@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header {
+header{
     background-color: black;
 }
 
@@ -297,4 +297,65 @@ nav li a:hover {
         max-width: 50%;
     }
 }
+.text-center{
+    text-align: center;
+}
 
+/* exercise section styles */
+.exercises-container{
+    display: flex;
+    gap: 20px 30px 20px 20px;
+}
+.exercise{
+    padding: 40px;
+}
+main{
+    max-width: 1060px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    color: white;
+  
+}
+
+main section {
+    margin-top: 100px;
+}
+.exercise image{
+    padding: 80px;
+}
+ @media (max-width: 576px) {
+.exercises-container{
+    flex-direction: column;
+}
+}
+
+.run{
+    width: 30%;
+}
+.exercisessec{
+    display: flex;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+@media (max-width: 576px) {
+.exercisessec {
+    flex-direction: column;
+    text-align: center;
+}
+.run {
+    width: 100%;
+    height: auto;
+}
+.btn-primary {
+    justify-content: center;
+}
+}
+@media (min-width: 1200px) {
+.exercisessec{
+    width: 100%;
+}
+.run {
+    width: 50%;
+}
+}
